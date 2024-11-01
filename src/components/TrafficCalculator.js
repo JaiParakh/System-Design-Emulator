@@ -55,9 +55,9 @@ const TrafficCalculator = () => {
   const [numRequests, setNumRequests] = useState(0);
   const [selected, setSelected] = useState(options[0].name);
 
-  // useEffect(() => {
-  //   calculateTraffic();
-  // }, []);
+  useEffect(() => {
+    calculateTraffic();
+  }, []);
 
   const handleReset = () => {
     setNumRequests(0);

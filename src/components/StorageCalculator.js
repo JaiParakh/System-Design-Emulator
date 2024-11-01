@@ -53,15 +53,16 @@ const StorageCalculator = () => {
   const [yearsToStore, setYearsToStore] = useState(0);
   const [selected, setSelected] = useState(options[0].name);
 
-  // useEffect(() => {
-  //   calculateStorage();
-  // }, []);
+  useEffect(() => {
+    calculateStorage();
+  }, []);
 
   const handleReset = () => {
     setStoragePerItem(0);
     setItemPerDay(0);
     setDaysPerYear(365);
     setYearsToStore(0);
+    calculateStorage();
   }
 
   const handleChange = (event) => {
